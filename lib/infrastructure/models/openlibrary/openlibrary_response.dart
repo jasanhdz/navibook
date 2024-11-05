@@ -5,7 +5,7 @@ class OpenLibraryResponse {
   final String name;
   final String subjectType;
   final int workCount;
-  final List<BookOpenLibrarySearch> works;
+  final List<BookOpenLibrary> works;
 
   OpenLibraryResponse({
     required this.key,
@@ -21,8 +21,8 @@ class OpenLibraryResponse {
         name: json["name"],
         subjectType: json["subject_type"],
         workCount: json["work_count"],
-        works: List<BookOpenLibrarySearch>.from(
-            json["works"].map((x) => BookOpenLibrarySearch.fromJson(x))),
+        works: List<BookOpenLibrary>.from(
+            json["works"].map((x) => BookOpenLibrary.fromJson(x))),
       );
 
   Map<String, dynamic> toJson() => {

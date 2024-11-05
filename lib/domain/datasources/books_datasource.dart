@@ -71,4 +71,6 @@ extension SubjectExtension on Subject {
 
 abstract class BooksDataSource {
   Future<List<Book>> getBooksBySubject({Subject subject = Subject.fantasy});
+
+  Future<List<Book>> searchBooks(String query);
 }

@@ -23,7 +23,10 @@ class BookHorizontalListView extends StatelessWidget {
       child: Column(
         children: [
           if (title != null || subTitle != null)
-            _Title(title: title, subTitle: subTitle),
+            _Title(
+              title: title,
+              subTitle: subTitle,
+            ),
           Expanded(
             child: ListView.builder(
               itemCount: books.length,

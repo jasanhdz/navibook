@@ -10,4 +10,9 @@ class BooksRepositoryImpl implements BooksRepository {
   Future<List<Book>> getBooksBySubject({Subject subject = Subject.fantasy}) {
     return dataSource.getBooksBySubject(subject: subject);
   }
+
+  @override
+  Future<List<Book>> searchBooks(String query) {
+    return dataSource.searchBooks(query);
+  }
 }

@@ -1,4 +1,4 @@
-class BookOpenLibrarySearch {
+class BookOpenLibrary {
   final List<String> authorAlternativeName;
   final List<String> authorKey;
   final List<String> authorName;
@@ -51,7 +51,7 @@ class BookOpenLibrarySearch {
   final List<String> authorFacet;
   final String ddcSort;
 
-  BookOpenLibrarySearch({
+  BookOpenLibrary({
     required this.authorAlternativeName,
     required this.authorKey,
     required this.authorName,
@@ -105,7 +105,7 @@ class BookOpenLibrarySearch {
     required this.ddcSort,
   });
 
-  factory BookOpenLibrarySearch.fromJson(Map<String, dynamic> json) => BookOpenLibrarySearch(
+  factory BookOpenLibrary.fromJson(Map<String, dynamic> json) => BookOpenLibrary(
       authorAlternativeName: json["author_alternative_name"] == null
           ? []
           : List<String>.from(
@@ -120,7 +120,7 @@ class BookOpenLibrarySearch {
           ? []
           : List<String>.from(json["contributor"].map((x) => x.toString())),
       coverEditionKey: json["cover_edition_key"] ?? '',
-      coverI: json["cover_id"] ?? 0,
+      coverI: json["cover_id"] ?? json["cover_i"] ?? 8569284,
       ddc: json["ddc"] == null
           ? []
           : List<String>.from(json["ddc"].map((x) => x.toString())),

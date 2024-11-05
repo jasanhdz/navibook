@@ -62,7 +62,9 @@ class _HomeViewState extends ConsumerState {
                   children: categories.map((category) {
                     final books = ref.watch(booksSlideshowProvider(category));
                     return BookHorizontalListView(
-                        books: books, title: 'Populares', subTitle: 'Lunes 20');
+                        books: books,
+                        title: category.asString,
+                        subTitle: 'Monday 20');
                   }).toList(),
                 )
               ],
