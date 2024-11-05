@@ -7,12 +7,7 @@ class BooksRepositoryImpl implements BooksRepository {
   BooksRepositoryImpl(this.dataSource);
 
   @override
-  Future<List<Book>> getBooksBySubject({String subject = 'fantasy'}) {
+  Future<List<Book>> getBooksBySubject({Subject subject = Subject.fantasy}) {
     return dataSource.getBooksBySubject(subject: subject);
-  }
-
-  @override
-  Future<List<Book>> getBooksPopular() {
-    return dataSource.getBooksPopular();
   }
 }

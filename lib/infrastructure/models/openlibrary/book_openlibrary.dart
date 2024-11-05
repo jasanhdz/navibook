@@ -36,7 +36,7 @@ class BookOpenLibrarySearch {
   final List<String> person;
   final double ratingsAverage;
   final double ratingsSortable;
-  final int ratingsCount;
+  final double ratingsCount;
   final int ratingsCount1;
   final int ratingsCount2;
   final int ratingsCount3;
@@ -120,7 +120,7 @@ class BookOpenLibrarySearch {
           ? []
           : List<String>.from(json["contributor"].map((x) => x.toString())),
       coverEditionKey: json["cover_edition_key"] ?? '',
-      coverI: json["cover_i"] ?? 0,
+      coverI: json["cover_id"] ?? 0,
       ddc: json["ddc"] == null
           ? []
           : List<String>.from(json["ddc"].map((x) => x.toString())),
@@ -175,7 +175,7 @@ class BookOpenLibrarySearch {
       person: json["person"] == null ? [] : List<String>.from(json["person"].map((x) => x.toString())),
       ratingsAverage: json["ratings_average"]?.toDouble() ?? 0.0,
       ratingsSortable: json["ratings_sortable"]?.toDouble() ?? 0.0,
-      ratingsCount: json["ratings_count"] ?? 0,
+      ratingsCount: json["ratings_count"] ?? 1000000.34,
       ratingsCount1: json["ratings_count_1"] ?? 0,
       ratingsCount2: json["ratings_count_2"] ?? 0,
       ratingsCount3: json["ratings_count_3"] ?? 0,

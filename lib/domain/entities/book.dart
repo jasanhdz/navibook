@@ -9,7 +9,7 @@ class Book {
   final List<String> publishDates;
   final int pagesCount;
   final double averageRating;
-  final int ratingsCount;
+  final double ratingsCount;
   final List<String> languages;
   final String bookType;
   final List<int> publishYears;

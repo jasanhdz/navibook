@@ -11,8 +11,10 @@ class OpenLibraryDataSource implements BooksDataSource {
   }));
 
   @override
-  Future<List<Book>> getBooksBySubject({String subject = 'fantasy'}) async {
-    final response = await dio.get('/subjects/fantasy.json');
+  Future<List<Book>> getBooksBySubject(
+      {Subject subject = Subject.fantasy}) async {
+    print(subject.asString);
+    final response = await dio.get('/subjects/${subject.asString}.json');
     final bookOpenLibraryResponse = OpenLibraryResponse.fromJson(response.data);
 
     final List<Book> books = bookOpenLibraryResponse.works
@@ -20,10 +22,5 @@ class OpenLibraryDataSource implements BooksDataSource {
         .toList();
 
     return books;
-  }
-
-  @override
-  Future<List<Book>> getBooksPopular() async {
-    return [];
   }
 }
