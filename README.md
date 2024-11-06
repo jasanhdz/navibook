@@ -47,21 +47,21 @@
 
 ## Capturas de Pantalla
 
-![Pantalla de Inicio](.assets/home.png)
+![Pantalla de Inicio](https://res.cloudinary.com/dsqonpjii/image/upload/v1730921557/navibook/uiq3kyjoacmmvpzsemxw.png)
 *Pantalla de Inicio mostrando la colección de libros.*
 
-![Pantalla detalle](.assets/detail.png.png)
+![Pantalla detalle](https://res.cloudinary.com/dsqonpjii/image/upload/v1730921506/navibook/shprymky33cf0u7u8rz7.png)
 *Pantalla de Perfil mostrando información del usuario en modo de solo lectura.*
 
-![Pantalla Busquedad](.assets/search.png.png)
+![Pantalla Busquedad](https://res.cloudinary.com/dsqonpjii/image/upload/v1730921543/navibook/ck8l5seyeky74nlynl7x.png)
 *Pantalla de Perfil mostrando información del usuario en modo de solo lectura.*
 
-![Editar Perfil](.assets/form.png)
+![Editar Perfil](https://res.cloudinary.com/dsqonpjii/image/upload/v1730921486/navibook/fwevaofxjzosvqsbkvuc.png)
 *Pantalla de Editar Perfil permitiendo a los usuarios actualizar su información.*
 
 ## Video de Demostración
 
-![Ver la Demostración](.assets/video.mov)
+![Ver la Demostración](https://res.cloudinary.com/dsqonpjii/video/upload/v1730921791/navibook/zm1f87ggcp6htlou23r1.mov)
 
 *Haz clic en la imagen de arriba para ver una demostración de NaviBook en acción.*
 
