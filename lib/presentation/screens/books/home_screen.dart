@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:navibook/presentation/screens/screens.dart';
 import 'package:navibook/presentation/views/views.dart';
 import 'package:navibook/presentation/widgets/widgets.dart';
 
@@ -9,11 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   const HomeScreen({super.key, required this.pageIndex});
 
-  final viewRoutes = const <Widget>[
-    HomeView(),
-    ProfileScreen(),
-    FavoritesView()
-  ];
+  final viewRoutes = const <Widget>[HomeView(), FavoritesView(), ProfileView()];
 
   @override
   Widget build(BuildContext context) {
