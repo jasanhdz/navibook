@@ -42,7 +42,7 @@ class CustomAppBar extends ConsumerWidget {
                       .then((book) {
                     if (book != null) {
                       final keyId = book.key.split('works/')[1];
-                      context.push('/books/$keyId');
+                      context.push('/home/0/books/$keyId');
                     }
                   });
                 },

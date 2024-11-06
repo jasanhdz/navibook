@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({super.key});
+class FavoritesView extends StatelessWidget {
+  const FavoritesView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('profile page'),
+        title: const Text('Favorites view'),
       ),
       body: const Center(
-        child: Text('Profile page'),
+        child: Text('Favorites'),
       ),
     );
   }

@@ -18,7 +18,6 @@ class BookMapNotifier extends StateNotifier<Map<String, Book>> {
   Future<void> loadBook(String bookId) async {
     if (state[bookId] != null) return;
 
-    print('realizando petición http');
     final book = await getBook(bookId);
 
     state = {...state, bookId: book};

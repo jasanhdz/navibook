@@ -18,7 +18,6 @@ class OpenLibrarySearchResponse {
   });
 
   factory OpenLibrarySearchResponse.fromJson(Map<String, dynamic> json) {
-    print(json);
     return OpenLibrarySearchResponse(
         q: json["q"],
         docs: List<BookOpenLibrarySearch>.from(
