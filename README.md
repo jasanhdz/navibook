@@ -61,7 +61,7 @@
 
 ## Video de Demostración
 
-![Ver la Demostración](https://res.cloudinary.com/dsqonpjii/video/upload/v1730921791/navibook/zm1f87ggcp6htlou23r1.mov)
+[Demo del Video](https://res.cloudinary.com/dsqonpjii/video/upload/v1730921791/navibook/zm1f87ggcp6htlou23r1.mov)
 
 *Haz clic en la imagen de arriba para ver una demostración de NaviBook en acción.*
 
