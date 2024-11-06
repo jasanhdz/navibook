@@ -15,4 +15,9 @@ class BooksRepositoryImpl implements BooksRepository {
   Future<List<Book>> searchBooks(String query) {
     return dataSource.searchBooks(query);
   }
+
+  @override
+  Future<Book> getBookById(String id) {
+    return dataSource.getBookById(id);
+  }
 }

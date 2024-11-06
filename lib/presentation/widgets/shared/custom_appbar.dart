@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:navibook/domain/entities/book.dart';
 import 'package:navibook/presentation/delegates/search_movie_delegate.dart';
 import 'package:navibook/presentation/providers/providers.dart';
@@ -31,13 +32,19 @@ class CustomAppBar extends ConsumerWidget {
                   final searchQuery = ref.read(searchQueryProvider);
 
                   showSearch<Book?>(
-                      query: searchQuery,
-                      context: context,
-                      delegate: SearchBooksDelegate(
-                          initialBooks: searchedBooks,
-                          searchBooks: ref
-                              .read(searchedBooksProvider.notifier)
-                              .searchBooksByQuery));
+                          query: searchQuery,
+                          context: context,
+                          delegate: SearchBooksDelegate(
+                              initialBooks: searchedBooks,
+                              searchBooks: ref
+                                  .read(searchedBooksProvider.notifier)
+                                  .searchBooksByQuery))
+                      .then((book) {
+                    if (book != null) {
+                      final keyId = book.key.split('works/')[1];
+                      context.push('/books/$keyId');
+                    }
+                  });
                 },
               )
             ],

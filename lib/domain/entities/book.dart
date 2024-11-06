@@ -22,6 +22,8 @@ class Book {
   final int lastModifiedTimestamp;
   final double version;
   final coverImage;
+  final description;
+  final List<String> subjects;
 
   Book(
       {required this.key,
@@ -45,6 +47,8 @@ class Book {
       required this.hasFullText,
       required this.identifier,
       required this.lastModifiedTimestamp,
+      required this.description,
       required this.version,
+      required this.subjects,
       required this.coverImage});
 }

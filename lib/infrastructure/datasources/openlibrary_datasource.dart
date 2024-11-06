@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:navibook/domain/datasources/books_datasource.dart';
 import 'package:navibook/domain/entities/book.dart';
 import 'package:navibook/infrastructure/mappers/book_mapper.dart';
+import 'package:navibook/infrastructure/models/openlibrary/book_details.dart';
 import 'package:navibook/infrastructure/models/openlibrary/openlibrary_response.dart';
 import 'package:navibook/infrastructure/models/openlibrary/openlibrary_search_response.dart';
 
@@ -40,5 +41,16 @@ class OpenLibraryDataSource implements BooksDataSource {
         .toList();
 
     return books;
+  }
+
+  @override
+  Future<Book> getBookById(String id) async {
+    final response = await dio.get('/works/$id.json');
+    if (response.statusCode != 200) throw Exception('');
+
+    final bookDetails = BookDetails.fromJson(response.data);
+    final book = BookMapper.bookDetailsToEntity(bookDetails);
+
+    return book;
   }
 }
